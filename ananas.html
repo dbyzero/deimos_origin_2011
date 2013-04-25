@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr" dir="ltr">
+<head> 
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Ananas - Le jeu vidéo web</title>
+        <script type="text/javascript" src="js/mootools.js"></script>
+        <script type="text/javascript" src="js/moteur.js"></script>
+        <script type="text/javascript" src="js/projectile.js"></script>
+        <script type="text/javascript" src="js/avatar.js"></script>
+        <script type="text/javascript" src="js/function.js"></script>
+        <link type="text/css" rel="stylesheet" media="all" href="css/ananas.css" />
+</head>
+<body>
+	<div style="z-index:200;position:absolute">
+		<div style="position:absolute;left:0;top:20px;z-index:1;height:105px;width:230px;background-color:black"></div>
+		<input id="test_box" type="text" value="0" style="position:absolute;left:10px;top:50px;z-index:0"/>
+		<input id="test_box2" type="text" value="0" style="position:absolute;left:10px;top:75px;z-index:0"/>
+		<input id="test_box3" type="text" value="0" style="position:absolute;left:10px;top:100px;z-index:0"/>
+		<input id="garbage_box" type="text" value="" style="position:absolute;left:10px;top:100px;z-index:0" size="0"/>
+		<div id="projectiles"></div>
+		<input id="form_nom" type="text" style="position:absolute;left:0;top:25px;z-index:2" value="name..." onclick="this.value=''"/>
+		<input id="form_check" type="button" style="position:absolute;left:150px;top:25px;z-index:2" value="Remember" onclick="if(document.getElementById('form_nom').value == '' ) { alert('Choose a name') ; }else{ checkName(document.getElementById('form_nom').value)}"/>
+		<input id="form_start" type="button" style="position:absolute;left:250px;top:25px;display:none;z-index:2" value="Warp" onclick="document.getElementById('garbage_box').focus() ; engineStart.run() ; this.style.display='none';document.getElementById('form_check').style.display='none';document.getElementById('form_nom').style.display='none';document.getElementById('form_stop').style.display='block';"/>
+		<input id="form_stop" type="button"  style="z-index:8;position:absolute;left:0;top:25px;display:none;z-index:2" value="stop" onclick="engineStop.run();this.style.display = 'none'"/>
+		<img alt="half" src="img/ananas_0_0_0.gif" class="hide"/>
+		<img alt="half" src="img/ananas_0_0_1.gif" class="hide"/>
+		<img alt="half" src="img/ananas_0_1_0.gif" class="hide"/>
+		<img alt="half" src="img/ananas_1_0_0.gif" class="hide"/>
+		<img alt="half" src="img/ananas_0_1_1.gif" class="hide"/>
+		<img alt="half" src="img/ananas_1_1_0.gif" class="hide"/>
+		<img alt="half" src="img/ananas_1_1_1.gif" class="hide"/>
+		<img alt="half" src="img/ananas_1_0_1.gif" class="hide"/>
+		<img alt="projectile" src="img/projectile.png" class="hide"/>
+	</div>
+        <div id="main" class="clear-block"> 
+	        <textarea id="dialogue"></textarea>
+	        <img alt="bulle avatar" src="img/bulles.png" id="bulle"/>
+		<img alt="commandes" src="img/commandes.jpg" class="commande block"/>
+		<img alt="rokh" src="img/rock2.png" class="rokh"/>
+		<img alt="tengu" src="img/tengu.png" class="tengu1"/>
+		<img alt="tengu" src="img/tengu.png" class="tengu2"/>
+		<img alt="tengu" src="img/tengu2.png" class="tengu3"/>
+		<img alt="raven" src="img/raven.png" class="raven"/>
+		<div class="block t1"></div>
+		<div class="block t2"></div>
+		<div class="block t3"></div>
+		<div class="block r1"></div>
+		<div class="ship c1"></div>
+		<div class="block ship1"></div>
+		<div class="ship ship2"></div>
+	</div> 
+</body>
+</html> 

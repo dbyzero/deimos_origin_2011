@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+ 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr"> 
+<head> 
+	<meta http-equiv="content-Type" content="text/html; charset=UTF-8" /> 
+	<title> CanardPC.com - Beta 1 - Moteur JS</title> 
+	<meta http-equiv="cache-control" content="no-cache"/>
+	<link rel="stylesheet" type="text/css" href="css/default.css" /> 
+	<script type="text/javascript" src="js/mootools.js"></script> 
+	<script type="text/javascript" src="js/moteur.js"></script> 
+	<script type="text/javascript" src="js/projectile.js"></script> 
+	<script type="text/javascript" src="js/avatar.js"></script> 
+	<script type="text/javascript" src="js/function.js"></script> 
+</head> 
+<body>
+	<div id="main">
+		<img id="palmier" alt="palmier"  src="img/palmier.png"/>
+		<img id="sun" alt="sun" src="img/sun.png"/>
+		<img id="sun_bouche" alt="sun_bouche" src="img/sun_bouche.png"/>
+		<input id="test_box" type="text" value="0"/>
+		<input id="test_box2" type="text" value="0"/>
+		<input id="test_box3" type="text" value="0"/>
+		<textarea id="dialogue"></textarea>
+		<div id="projectiles"></div>
+		<div id="block_test" class="caca block"></div>
+		<div id="block_test3" class="caca block"></div>
+		<div id="block_test4" class="caca block"></div>
+		<div id="block_test5" class="plateforme ship"></div>
+		<div id="block_test6" class="block"></div>
+		<input id="form_nom" type="text" style="position:absolute;left:0;top:0" value="" onclick="this.value=''"/>
+		<input id="form_check" type="button" style="position:absolute;left:150px;top:0" value="Check Nom" onclick="if(document.getElementById('form_nom').value == '' ) { alert('Choose a name') ; }else{ checkName(document.getElementById('form_nom').value)}"/>
+		<input id="form_start" type="button" style="position:absolute;left:250px;top:0;display:none" value="Join" onclick="window.focus() ; engineStart.run() ; this.style.display='none';document.getElementById('form_check').style.display='none';document.getElementById('form_nom').style.display='none';document.getElementById('form_stop').style.display='block';"/>
+		<input id="form_stop" type="button"  style="z-index:8;position:absolute;left:0;top:0;display:none" value="stop" onclick="engineStop.run();this.style.display = 'none'"/>
+		<img alt="bulle avatar" src="img/bulles.png" id="bulle"/>
+		<img alt="half" src="img/half_0_0_0.gif" class="hide"/>
+		<img alt="half" src="img/half_0_0_1.gif" class="hide"/>
+		<img alt="half" src="img/half_0_1_0.gif" class="hide"/>
+		<img alt="half" src="img/half_1_0_0.gif" class="hide"/>
+		<img alt="half" src="img/half_0_1_1.gif" class="hide"/>
+		<img alt="half" src="img/half_1_1_0.gif" class="hide"/>
+		<img alt="half" src="img/half_1_1_1.gif" class="hide"/>
+		<img alt="half" src="img/half_1_0_1.gif" class="hide"/>
+		<img alt="projectile" src="img/projectile.png" class="hide"/>
+	</div>
+</body>
